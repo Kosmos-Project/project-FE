@@ -15,7 +15,7 @@ import {
   Tooltip
 } from '@mui/material';
 
-import SidebarMenu from './SidebarMenu';
+import SidebarMenu from '../../components/LNB';
 import Logo from 'src/components/LogoSign';
 
 const SidebarWrapper = styled(Box)(
