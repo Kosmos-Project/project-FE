@@ -173,17 +173,6 @@ function LNB() {
                   disableRipple
                   component={RouterLink}
                   onClick={closeSidebar}
-                  to="/components/tabs"
-                  startIcon={<FilterVintageTwoToneIcon />}
-                >
-                  Tabs
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
                   to="/components/badges"
                   startIcon={<HowToVoteTwoToneIcon />}
                 >

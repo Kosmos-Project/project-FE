@@ -46,7 +46,6 @@ const Modals = Loader(lazy(() => import('src/pages/pages/Components/Modals')));
 const Accordions = Loader(
   lazy(() => import('src/pages/pages/Components/Accordions'))
 );
-const Tabs = Loader(lazy(() => import('src/pages/pages/Components/Tabs')));
 const Badges = Loader(lazy(() => import('src/pages/pages/Components/Badges')));
 const Tooltips = Loader(
   lazy(() => import('src/pages/pages/Components/Tooltips'))
@@ -180,10 +179,6 @@ const routes: RouteObject[] = [
       {
         path: 'accordions',
         element: <Accordions />
-      },
-      {
-        path: 'tabs',
-        element: <Tabs />
       },
       {
         path: 'badges',
