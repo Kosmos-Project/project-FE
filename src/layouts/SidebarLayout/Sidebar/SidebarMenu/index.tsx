@@ -250,7 +250,7 @@ function SidebarMenu() {
                   to="/management/transactions"
                   startIcon={<TableChartTwoToneIcon />}
                 >
-                  Transactions List
+                  거래 내역
                 </Button>
               </ListItem>
             </List>
@@ -274,7 +274,7 @@ function SidebarMenu() {
                   to="/management/profile/details"
                   startIcon={<AccountCircleTwoToneIcon />}
                 >
-                  User Profile
+                  내 프로필
                 </Button>
               </ListItem>
               <ListItem component="div">
@@ -285,7 +285,7 @@ function SidebarMenu() {
                   to="/management/profile/settings"
                   startIcon={<DisplaySettingsTwoToneIcon />}
                 >
-                  Account Settings
+                  계정 설정
                 </Button>
               </ListItem>
             </List>

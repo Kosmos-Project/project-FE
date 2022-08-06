@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import { RouteObject } from 'react-router';
 
 import SidebarLayout from 'src/layouts/SidebarLayout';
-import BaseLayout from 'src/layouts/BaseLayout';
+import BaseLayout from 'src/layouts/Base';
 
 import SuspenseLoader from 'src/components/SuspenseLoader';
 
