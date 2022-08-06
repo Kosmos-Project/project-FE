@@ -16,8 +16,8 @@ import { SidebarContext } from 'src/contexts/SidebarContext';
 import CloseTwoToneIcon from '@mui/icons-material/CloseTwoTone';
 
 import HeaderButtons from './Buttons';
-import HeaderUserbox from './Userbox';
-import HeaderMenu from './Menu';
+import HeaderUserbox from './Userbox/UserBox';
+import HeaderMenu from '../../../components/GNB';
 
 const HeaderWrapper = styled(Box)(
   ({ theme }) => `

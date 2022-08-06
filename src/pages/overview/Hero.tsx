@@ -1,7 +1,5 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
-
 import { Link as RouterLink } from 'react-router-dom';
-
 import { styled } from '@mui/material/styles';
 
 const TypographyH1 = styled(Typography)(
@@ -82,7 +80,7 @@ function Hero() {
         <Grid item md={10} lg={8} mx="auto">
           <LabelWrapper color="success">Version 2.0.0</LabelWrapper>
           <TypographyH1 sx={{ mb: 2 }} variant="h1">
-            중고 거래 서비스를 이용해 보세요!
+            중고 거래
           </TypographyH1>
           <TypographyH2
             sx={{ lineHeight: 1.5, pb: 4 }}
@@ -90,9 +88,7 @@ function Hero() {
             color="text.secondary"
             fontWeight="normal"
           >
-            High performance React template built with lots of powerful
-            Material-UI components across multiple product niches for fast &
-            perfect apps development processes
+            중고 거래 서비스를 이용해 보세요!
           </TypographyH2>
           <Button
             component={RouterLink}

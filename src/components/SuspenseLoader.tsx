@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import NProgress from 'nprogress';
 import { Box, CircularProgress } from '@mui/material';
 
+// NProgress : 로딩 상태를 보여주는 라이브러리
 function SuspenseLoader() {
   useEffect(() => {
     NProgress.start();

@@ -11,10 +11,10 @@ function PageHeader() {
     <Grid container justifyContent="space-between" alignItems="center">
       <Grid item>
         <Typography variant="h3" component="h3" gutterBottom>
-          Transactions
+          거래 내역
         </Typography>
         <Typography variant="subtitle2">
-          {user.name}, these are your recent transactions
+          {user.name}님이 지금까지 단군마켓에서 거래하신 내역입니다.
         </Typography>
       </Grid>
       <Grid item>

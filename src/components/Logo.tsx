@@ -11,7 +11,7 @@ import {
 
 function Logo() {
   return (
-    <LogoWrapper to="/overview">
+    <LogoWrapper to="/">
       <LogoSignWrapper>
         <LogoSign>
           <LogoSignInner />

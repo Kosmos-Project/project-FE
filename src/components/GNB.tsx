@@ -62,7 +62,7 @@ const ListWrapper = styled(Box)(
 `
 );
 
-function HeaderMenu() {
+function GNB() {
   const ref = useRef<any>(null);
   const [isOpen, setOpen] = useState<boolean>(false);
 
@@ -128,9 +128,6 @@ function HeaderMenu() {
         </List>
       </ListWrapper>
       <Menu anchorEl={ref.current} onClose={handleClose} open={isOpen}>
-        <MenuItem sx={{ px: 3 }} component={NavLink} to="/overview">
-          Overview
-        </MenuItem>
         <MenuItem sx={{ px: 3 }} component={NavLink} to="/components/tabs">
           Tabs
         </MenuItem>
@@ -145,4 +142,4 @@ function HeaderMenu() {
   );
 }
 
-export default HeaderMenu;
+export default GNB;

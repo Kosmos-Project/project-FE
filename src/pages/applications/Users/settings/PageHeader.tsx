@@ -9,10 +9,10 @@ function PageHeader() {
   return (
     <>
       <Typography variant="h3" component="h3" gutterBottom>
-        User Settings
+        계정 설정
       </Typography>
       <Typography variant="subtitle2">
-        {user.name}, this could be your user settings panel.
+        {user.name}님, 이 곳에서 계정 관련 설정을 할 수 있습니다.
       </Typography>
     </>
   );

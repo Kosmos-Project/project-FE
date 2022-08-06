@@ -3,7 +3,7 @@ import { Box, alpha, lighten, useTheme } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 
 import Sidebar from './LNBLayout';
-import Header from './Header';
+import Header from './Header/HeaderLayout';
 
 interface SidebarLayoutProps {
   children?: ReactNode;
