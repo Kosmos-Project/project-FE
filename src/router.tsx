@@ -16,64 +16,60 @@ const Loader = (Component) => (props) =>
 
 // Pages
 
-const Overview = Loader(lazy(() => import('src/content/overview')));
+const Overview = Loader(lazy(() => import('src/pages/overview')));
 
 // Dashboards
 
-const Crypto = Loader(lazy(() => import('src/content/dashboards/Crypto')));
+const Crypto = Loader(lazy(() => import('src/pages/dashboards/Crypto')));
 
 // Applications
 
 const Messenger = Loader(
-  lazy(() => import('src/content/applications/Messenger'))
+  lazy(() => import('src/pages/applications/Messenger'))
 );
 const Transactions = Loader(
-  lazy(() => import('src/content/applications/Transactions'))
+  lazy(() => import('src/pages/applications/Transactions'))
 );
 const UserProfile = Loader(
-  lazy(() => import('src/content/applications/Users/profile'))
+  lazy(() => import('src/pages/applications/Users/profile'))
 );
 const UserSettings = Loader(
-  lazy(() => import('src/content/applications/Users/settings'))
+  lazy(() => import('src/pages/applications/Users/settings'))
 );
 
 // Components
 
 const Buttons = Loader(
-  lazy(() => import('src/content/pages/Components/Buttons'))
+  lazy(() => import('src/pages/pages/Components/Buttons'))
 );
-const Modals = Loader(
-  lazy(() => import('src/content/pages/Components/Modals'))
-);
+const Modals = Loader(lazy(() => import('src/pages/pages/Components/Modals')));
 const Accordions = Loader(
-  lazy(() => import('src/content/pages/Components/Accordions'))
+  lazy(() => import('src/pages/pages/Components/Accordions'))
 );
-const Tabs = Loader(lazy(() => import('src/content/pages/Components/Tabs')));
-const Badges = Loader(
-  lazy(() => import('src/content/pages/Components/Badges'))
-);
+const Tabs = Loader(lazy(() => import('src/pages/pages/Components/Tabs')));
+const Badges = Loader(lazy(() => import('src/pages/pages/Components/Badges')));
 const Tooltips = Loader(
-  lazy(() => import('src/content/pages/Components/Tooltips'))
+  lazy(() => import('src/pages/pages/Components/Tooltips'))
 );
 const Avatars = Loader(
-  lazy(() => import('src/content/pages/Components/Avatars'))
+  lazy(() => import('src/pages/pages/Components/Avatars'))
 );
-const Cards = Loader(lazy(() => import('src/content/pages/Components/Cards')));
-const Forms = Loader(lazy(() => import('src/content/pages/Components/Forms')));
+const Cards = Loader(lazy(() => import('src/pages/pages/Components/Cards')));
+const Forms = Loader(lazy(() => import('src/pages/pages/Components/Forms')));
 
 // Status
 
 const Status404 = Loader(
-  lazy(() => import('src/content/pages/Status/Status404'))
+  lazy(() => import('src/pages/pages/Status/Status404'))
 );
 const Status500 = Loader(
-  lazy(() => import('src/content/pages/Status/Status500'))
+  lazy(() => import('src/pages/pages/Status/Status500'))
 );
 const StatusComingSoon = Loader(
-  lazy(() => import('src/content/pages/Status/ComingSoon'))
+  lazy(() => import('src/pages/pages/Status/ComingSoon'))
 );
 const StatusMaintenance = Loader(
-  lazy(() => import('src/content/pages/Status/Maintenance'))
+  lazy(() => import('src/pages/pages/Status/Maintenance'))
 );
 
 const routes: RouteObject[] = [
