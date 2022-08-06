@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 import {
   Box,
@@ -9,12 +9,16 @@ import {
   IconButton,
   Tooltip,
   styled,
-  useTheme
+  useTheme,
+  Button
 } from '@mui/material';
 import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone';
 import { SidebarContext } from 'src/contexts/SidebarContext';
 import CloseTwoToneIcon from '@mui/icons-material/CloseTwoTone';
-
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
+import MailIcon from '@mui/icons-material/Mail';
+import Badge from '@mui/material/Badge';
 import HeaderButtons from './Buttons';
 import HeaderUserbox from './Userbox/UserBox';
 
@@ -39,6 +43,7 @@ const HeaderWrapper = styled(Box)(
 
 function Header() {
   const { sidebarToggle, toggleSidebar } = useContext(SidebarContext);
+  const [count, setCount] = useState(5);
   const theme = useTheme();
 
   return (
@@ -68,6 +73,11 @@ function Header() {
         spacing={2}
       />
       <Box display="flex" alignItems="center">
+        {' '}
+        <Badge color="secondary" badgeContent={count}>
+          <MailIcon color="primary" />
+        </Badge>
+        <span style={{ width: '15px' }}></span>
         <HeaderButtons />
         <HeaderUserbox />
         <Box

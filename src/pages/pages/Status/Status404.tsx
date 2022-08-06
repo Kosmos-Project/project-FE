@@ -13,6 +13,7 @@ import { Helmet } from 'react-helmet-async';
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 const MainContent = styled(Box)(
   ({ theme }) => `
@@ -49,19 +50,11 @@ function Status404() {
           <Box textAlign="center">
             <img alt="404" height={180} src="/static/images/status/404.svg" />
             <Typography variant="h2" sx={{ my: 2 }}>
-              The page you were looking for doesn't exist.
-            </Typography>
-            <Typography
-              variant="h4"
-              color="text.secondary"
-              fontWeight="normal"
-              sx={{ mb: 4 }}
-            >
-              It's on us, we moved the content to a different page. The search
-              below should help!
+              페이지가 존재하지 않습니다.
             </Typography>
           </Box>
           <Container maxWidth="sm">
+            {/* 검색 컴포넌트 살려놓음. 다른 곳에서 이용하기 */}
             <Card sx={{ textAlign: 'center', mt: 3, p: 4 }}>
               <FormControl variant="outlined" fullWidth>
                 <OutlinedInputWrapper
@@ -82,9 +75,9 @@ function Status404() {
                 />
               </FormControl>
               <Divider sx={{ my: 4 }}>OR</Divider>
-              <Button href="/" variant="outlined">
-                Go to homepage
-              </Button>
+              <Link to="/">
+                <Button variant="outlined">Go to homepage</Button>
+              </Link>
             </Card>
           </Container>
         </Container>
