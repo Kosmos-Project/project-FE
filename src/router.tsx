@@ -6,6 +6,8 @@ import SidebarLayout from 'src/layouts/SidebarLayout/SidebarLayout';
 import BaseLayout from 'src/layouts/Base/BaseLayout';
 
 import SuspenseLoader from 'src/components/SuspenseLoader';
+import Login from './pages/Login';
+import SignUp from './pages/Signup';
 
 const Loader = (Component) => (props) =>
   (
@@ -39,15 +41,9 @@ const UserSettings = Loader(
 
 // Components
 
-const Buttons = Loader(
-  lazy(() => import('src/pages/pages/Components/Buttons'))
-);
 const Modals = Loader(lazy(() => import('src/pages/pages/Components/Modals')));
 const Accordions = Loader(
   lazy(() => import('src/pages/pages/Components/Accordions'))
-);
-const Tooltips = Loader(
-  lazy(() => import('src/pages/pages/Components/Tooltips'))
 );
 const Avatars = Loader(
   lazy(() => import('src/pages/pages/Components/Avatars'))
@@ -55,6 +51,7 @@ const Avatars = Loader(
 const Cards = Loader(lazy(() => import('src/pages/pages/Components/Cards')));
 const Forms = Loader(lazy(() => import('src/pages/pages/Components/Forms')));
 
+// 로그인, 회원가입도 추후에 lazy 사용하기
 // Status
 
 const Status404 = Loader(
@@ -129,6 +126,32 @@ const routes: RouteObject[] = [
     ]
   },
   {
+    path: 'login',
+    element: <Login />
+  },
+  {
+    path: 'signup',
+    element: <SignUp />
+  },
+  {
+    path: 'dashboards',
+    element: <SidebarLayout />,
+    children: [
+      {
+        path: '',
+        element: <Navigate to="crypto" replace />
+      },
+      {
+        path: 'crypto',
+        element: <Crypto />
+      },
+      {
+        path: 'messenger',
+        element: <Messenger />
+      }
+    ]
+  },
+  {
     path: 'management',
     element: <SidebarLayout />,
     children: [
@@ -160,16 +183,12 @@ const routes: RouteObject[] = [
     ]
   },
   {
-    path: '/components',
+    path: 'components',
     element: <SidebarLayout />,
     children: [
       {
         path: '',
         element: <Navigate to="buttons" replace />
-      },
-      {
-        path: 'buttons',
-        element: <Buttons />
       },
       {
         path: 'modals',
@@ -178,10 +197,6 @@ const routes: RouteObject[] = [
       {
         path: 'accordions',
         element: <Accordions />
-      },
-      {
-        path: 'tooltips',
-        element: <Tooltips />
       },
       {
         path: 'avatars',
