@@ -443,35 +443,6 @@ function Forms() {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12}>
-            <Card>
-              <CardHeader title="Sliders" />
-              <Divider />
-              <CardContent>
-                <Box sx={{ width: 200 }}>
-                  <Stack
-                    spacing={2}
-                    direction="row"
-                    sx={{ mb: 1 }}
-                    alignItems="center"
-                  >
-                    <VolumeDown />
-                    <Slider
-                      aria-label="Volume"
-                      value={value}
-                      onChange={handleChange2}
-                    />
-                    <VolumeUp />
-                  </Stack>
-                  <Slider
-                    disabled
-                    defaultValue={30}
-                    aria-label="Disabled slider"
-                  />
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
         </Grid>
       </Container>
       <Footer />

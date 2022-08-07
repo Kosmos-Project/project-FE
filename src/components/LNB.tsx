@@ -173,17 +173,6 @@ function LNB() {
                   disableRipple
                   component={RouterLink}
                   onClick={closeSidebar}
-                  to="/components/badges"
-                  startIcon={<HowToVoteTwoToneIcon />}
-                >
-                  Badges
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
                   to="/components/tooltips"
                   startIcon={<LocalPharmacyTwoToneIcon />}
                 >
@@ -256,28 +245,6 @@ function LNB() {
                   startIcon={<CameraFrontTwoToneIcon />}
                 >
                   Error 500
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/status/coming-soon"
-                  startIcon={<ChromeReaderModeTwoToneIcon />}
-                >
-                  Coming Soon
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/status/maintenance"
-                  startIcon={<WorkspacePremiumTwoToneIcon />}
-                >
-                  Maintenance
                 </Button>
               </ListItem>
             </List>
