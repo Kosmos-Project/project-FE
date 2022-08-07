@@ -25,12 +25,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
-import Stack from '@mui/material/Stack';
-import Slider from '@mui/material/Slider';
-import VolumeDown from '@mui/icons-material/VolumeDown';
-import VolumeUp from '@mui/icons-material/VolumeUp';
-
 import Switch from '@mui/material/Switch';
+import Postcode from 'src/utils/Postcode';
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
