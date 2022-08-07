@@ -35,20 +35,20 @@ function ManagementUserProfile() {
           alignItems="stretch"
           spacing={3}
         >
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={12}>
             <ProfileCover user={user} />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6}>
+            <Addresses />
+          </Grid>
+          <Grid item xs={12} md={6}>
             <RecentActivity />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6}>
             <PopularTags />
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={6}>
             <MyCards />
-          </Grid>
-          <Grid item xs={12} md={5}>
-            <Addresses />
           </Grid>
         </Grid>
       </Container>
