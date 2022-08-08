@@ -6,17 +6,20 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Postcode from 'src/utils/Postcode';
 
 const theme = createTheme();
 
 const SignUp: React.FC = () => {
+  const [zoneCode, setZoneCode] = useState();
+  const [address, setAddress] = useState();
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -25,6 +28,8 @@ const SignUp: React.FC = () => {
       password: data.get('password')
     });
   };
+
+  console.log('zoneCode, address', zoneCode, address);
 
   return (
     <ThemeProvider theme={theme}>
@@ -51,7 +56,7 @@ const SignUp: React.FC = () => {
             sx={{ mt: 3 }}
           >
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={12}>
                 <TextField
                   autoComplete="given-name"
                   name="firstName"
@@ -60,16 +65,6 @@ const SignUp: React.FC = () => {
                   id="firstName"
                   label="First Name"
                   autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
                 />
               </Grid>
               <Grid item xs={12}>
@@ -104,6 +99,36 @@ const SignUp: React.FC = () => {
                   autoComplete="new-password"
                 />
               </Grid>
+              <Grid item xs={6}>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  placeholder="우편번호"
+                  name="email"
+                  value={zoneCode}
+                />
+              </Grid>
+              <Postcode setZoneCode={setZoneCode} setAddress={setAddress} />
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  placeholder="주소"
+                  name="email"
+                  value={address}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  label="상세 주소를 입력해 주세요"
+                  name="email"
+                />
+              </Grid>
               <Grid item xs={12}>
                 <FormControlLabel
                   control={
@@ -123,7 +148,7 @@ const SignUp: React.FC = () => {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="/login" variant="body2">
+                <Link to="/login">
                   <a>Already have an account? Sign in</a>
                 </Link>
               </Grid>

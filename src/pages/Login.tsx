@@ -6,7 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -99,14 +99,10 @@ const Login: React.FC = () => {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
+                <Link to="#">Forgot password?</Link>
               </Grid>
               <Grid item>
-                <Link href="signup" variant="body2">
-                  <a>{"Don't have an account? Sign Up"}</a>
-                </Link>
+                <Link to="/signup">Don't have an account? Sign Up</Link>
               </Grid>
             </Grid>
           </Box>
