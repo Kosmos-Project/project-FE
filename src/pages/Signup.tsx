@@ -47,7 +47,7 @@ const SignUp: React.FC = () => {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign up
+            회원가입
           </Typography>
           <Box
             component="form"
@@ -56,14 +56,35 @@ const SignUp: React.FC = () => {
             sx={{ mt: 3 }}
           >
             <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  label="이메일 주소"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
               <Grid item xs={12} sm={12}>
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="name"
                   required
                   fullWidth
-                  id="firstName"
-                  label="First Name"
+                  id="name"
+                  label="이름"
+                  autoFocus
+                />
+              </Grid>
+              <Grid item xs={12} sm={12}>
+                <TextField
+                  autoComplete="given-name"
+                  name="nickname"
+                  required
+                  fullWidth
+                  id="nickname"
+                  label="닉네임"
                   autoFocus
                 />
               </Grid>
@@ -71,18 +92,8 @@ const SignUp: React.FC = () => {
                 <TextField
                   required
                   fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
                   name="password"
-                  label="Password"
+                  label="비밀번호"
                   type="password"
                   id="password"
                   autoComplete="new-password"
@@ -93,7 +104,7 @@ const SignUp: React.FC = () => {
                   required
                   fullWidth
                   name="password2"
-                  label="Password2"
+                  label="비밀번호 확인"
                   type="password"
                   id="password2"
                   autoComplete="new-password"
@@ -144,12 +155,12 @@ const SignUp: React.FC = () => {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign Up
+              회원가입
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link to="/login">
-                  <a>Already have an account? Sign in</a>
+                  <a>계정이 이미 있으신가요?</a>
                 </Link>
               </Grid>
             </Grid>

@@ -8,6 +8,7 @@ import BaseLayout from 'src/layouts/Base/BaseLayout';
 import SuspenseLoader from 'src/components/SuspenseLoader';
 import Login from './pages/Login';
 import SignUp from './pages/Signup';
+import Products from './pages/Products/Products';
 
 const Loader = (Component) => (props) =>
   (
@@ -45,10 +46,6 @@ const Modals = Loader(lazy(() => import('src/pages/pages/Components/Modals')));
 const Accordions = Loader(
   lazy(() => import('src/pages/pages/Components/Accordions'))
 );
-const Avatars = Loader(
-  lazy(() => import('src/pages/pages/Components/Avatars'))
-);
-const Cards = Loader(lazy(() => import('src/pages/pages/Components/Cards')));
 const Forms = Loader(lazy(() => import('src/pages/pages/Components/Forms')));
 
 // 로그인, 회원가입도 추후에 lazy 사용하기
@@ -164,6 +161,10 @@ const routes: RouteObject[] = [
         element: <Transactions />
       },
       {
+        path: 'products',
+        element: <Products />
+      },
+      {
         path: 'profile',
         children: [
           {
@@ -197,14 +198,6 @@ const routes: RouteObject[] = [
       {
         path: 'accordions',
         element: <Accordions />
-      },
-      {
-        path: 'avatars',
-        element: <Avatars />
-      },
-      {
-        path: 'cards',
-        element: <Cards />
       },
       {
         path: 'forms',

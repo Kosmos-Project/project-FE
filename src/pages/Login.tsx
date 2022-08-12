@@ -55,7 +55,7 @@ const Login: React.FC = () => {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            로그인
           </Typography>
           <Box
             component="form"
@@ -68,7 +68,7 @@ const Login: React.FC = () => {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="이메일 주소"
               name="email"
               autoComplete="email"
               autoFocus
@@ -79,7 +79,7 @@ const Login: React.FC = () => {
               required
               fullWidth
               name="password"
-              label="Password"
+              label="비밀번호"
               type="password"
               id="password"
               autoComplete="current-password"
@@ -87,7 +87,7 @@ const Login: React.FC = () => {
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              label="로그인 기억하기"
             />
             <Button
               type="submit"
@@ -95,14 +95,14 @@ const Login: React.FC = () => {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign In
+              로그인
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link to="#">Forgot password?</Link>
+                <Link to="#">비밀번호를 잊으셨나요?</Link>
               </Grid>
               <Grid item>
-                <Link to="/signup">Don't have an account? Sign Up</Link>
+                <Link to="/signup">아직 계정이 없으신가요?</Link>
               </Grid>
             </Grid>
           </Box>

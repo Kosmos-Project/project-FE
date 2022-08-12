@@ -125,16 +125,6 @@ function TopBarContent() {
             display: { xs: 'none', lg: 'flex' }
           }}
         >
-          <Tooltip placement="bottom" title="Start a voice call">
-            <IconButton color="primary">
-              <CallTwoToneIcon />
-            </IconButton>
-          </Tooltip>
-          <Tooltip placement="bottom" title="Start a video call">
-            <IconButton color="primary">
-              <VideoCameraFrontTwoToneIcon />
-            </IconButton>
-          </Tooltip>
           <Tooltip placement="bottom" title="Conversation information">
             <IconButton color="primary" onClick={handleDrawerToggle}>
               <InfoTwoToneIcon />

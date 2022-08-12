@@ -72,6 +72,17 @@ function LNB() {
                   disableRipple
                   component={RouterLink}
                   onClick={closeSidebar}
+                  to="/management/products"
+                  startIcon={<TableChartTwoToneIcon />}
+                >
+                  상품
+                </Button>
+              </ListItem>
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
                   to="/management/transactions"
                   startIcon={<TableChartTwoToneIcon />}
                 >
@@ -146,28 +157,6 @@ function LNB() {
                   startIcon={<EmojiEventsTwoToneIcon />}
                 >
                   Accordions
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/components/avatars"
-                  startIcon={<RedeemTwoToneIcon />}
-                >
-                  Avatars
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/components/cards"
-                  startIcon={<SettingsTwoToneIcon />}
-                >
-                  Cards
                 </Button>
               </ListItem>
               <ListItem component="div">
