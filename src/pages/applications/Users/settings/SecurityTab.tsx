@@ -23,7 +23,7 @@ import {
   TableRow,
   TableContainer,
   useTheme,
-  styled,
+  styled
 } from '@mui/material';
 
 import DoneTwoToneIcon from '@mui/icons-material/DoneTwoTone';
@@ -212,19 +212,6 @@ function SecurityTab() {
               <Button size="large" variant="outlined">
                 Change password
               </Button>
-            </ListItem>
-            <Divider component="li" />
-            <ListItem sx={{ p: 3 }}>
-              <ListItemText
-                primaryTypographyProps={{ variant: 'h5', gutterBottom: true }}
-                secondaryTypographyProps={{
-                  variant: 'subtitle2',
-                  lineHeight: 1
-                }}
-                primary="Two-Factor Authentication"
-                secondary="Enable PIN verification for all sign in attempts"
-              />
-              <Switch color="primary" />
             </ListItem>
           </List>
         </Card>
