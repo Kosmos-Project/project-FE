@@ -26,6 +26,7 @@ import {
   styled
 } from '@mui/material';
 
+import ConfirmModal from 'src/components/ConfirmModal';
 import DoneTwoToneIcon from '@mui/icons-material/DoneTwoTone';
 import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone';
 import { format, subHours, subWeeks, subDays } from 'date-fns';
@@ -212,6 +213,7 @@ function SecurityTab() {
               <Button size="large" variant="outlined">
                 Change password
               </Button>
+              <ConfirmModal />
             </ListItem>
           </List>
         </Card>

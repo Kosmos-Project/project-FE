@@ -34,7 +34,7 @@ function RecentActivity() {
           <ShoppingBagTwoToneIcon />
         </AvatarPrimary>
         <Box pl={2} flex={1}>
-          <Typography variant="h3">Orders</Typography>
+          <Typography variant="h3">주문</Typography>
 
           <Box pt={2} display="flex">
             <Box pr={8}>
@@ -66,7 +66,7 @@ function RecentActivity() {
           <FavoriteTwoToneIcon />
         </AvatarPrimary>
         <Box pl={2} flex={1}>
-          <Typography variant="h3">Favourites</Typography>
+          <Typography variant="h3">좋아요</Typography>
 
           <Box pt={2} display="flex">
             <Box pr={8}>
@@ -98,7 +98,7 @@ function RecentActivity() {
           <StarTwoToneIcon />
         </AvatarPrimary>
         <Box pl={2} flex={1}>
-          <Typography variant="h3">Reviews</Typography>
+          <Typography variant="h3">리뷰</Typography>
 
           <Box pt={2} display="flex">
             <Box pr={8}>

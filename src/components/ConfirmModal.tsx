@@ -28,19 +28,21 @@ export default function ConfirmModal() {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
-        </DialogTitle>
+        <DialogTitle id="alert-dialog-title">비밀번호 변경</DialogTitle>
         <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Let Google help apps determine location. This means sending
+            anonymous location data to Google, even when no apps are running.
+          </DialogContentText>
           <DialogContentText id="alert-dialog-description">
             Let Google help apps determine location. This means sending
             anonymous location data to Google, even when no apps are running.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Disagree</Button>
+          <Button onClick={handleClose}>취소</Button>
           <Button onClick={handleClose} autoFocus>
-            Agree
+            변경
           </Button>
         </DialogActions>
       </Dialog>

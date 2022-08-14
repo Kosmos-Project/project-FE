@@ -15,10 +15,9 @@ function ManagementUserProfile() {
     name: 'Catherine Pike',
     coverImg: '/static/images/placeholders/covers/5.jpg',
     avatar: '/static/images/avatars/4.jpg',
-    description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage",
+    description: '안녕하세요. 프론트엔드 개발자입니다.',
     jobtitle: 'Web Developer',
-    location: 'Barcelona, Spain',
+    location: '성남시 분당구',
     followers: '465'
   };
 

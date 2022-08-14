@@ -42,7 +42,6 @@ const UserSettings = Loader(
 
 // Components
 
-const Modals = Loader(lazy(() => import('src/pages/pages/Components/Modals')));
 const Accordions = Loader(
   lazy(() => import('src/pages/pages/Components/Accordions'))
 );
@@ -190,10 +189,6 @@ const routes: RouteObject[] = [
       {
         path: '',
         element: <Navigate to="buttons" replace />
-      },
-      {
-        path: 'modals',
-        element: <Modals />
       },
       {
         path: 'accordions',
