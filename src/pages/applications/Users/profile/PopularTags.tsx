@@ -26,8 +26,8 @@ function PopularTags() {
   const theme = useTheme();
 
   return (
-    <Card sx={{ height: '100%' }}>
-      <CardHeader title="Popular Tags" />
+    <Card sx={{ height: '50%' }}>
+      <CardHeader title="관심있는 검색어" />
       <Divider />
       <ListWrapper disablePadding>
         <ListItem
@@ -68,72 +68,6 @@ function PopularTags() {
           button
         >
           <ListItemText primary="#investorsWatch2022" />
-        </ListItem>
-        <Divider />
-        <ListSubheader>
-          <Typography sx={{ py: 1.5 }} variant="h4" color="text.primary">
-            Groups
-          </Typography>
-        </ListSubheader>
-        <Divider />
-        <ListItem button>
-          <ListItemAvatar>
-            <Avatar
-              sx={{
-                width: 38,
-                height: 38,
-                background: `${theme.colors.info.main}`,
-                color: `${theme.palette.info.contrastText}`
-              }}
-            >
-              WD
-            </Avatar>
-          </ListItemAvatar>
-          <ListItemText
-            primaryTypographyProps={{
-              variant: 'h5',
-              color: `${theme.colors.alpha.black[100]}`
-            }}
-            primary="Web Designers Lounge"
-          />
-        </ListItem>
-        <Divider />
-        <ListItem button>
-          <ListItemAvatar>
-            <Avatar
-              sx={{
-                width: 38,
-                height: 38,
-                background: `${theme.colors.alpha.black[100]}`,
-                color: `${theme.colors.alpha.white[100]}`
-              }}
-            >
-              D
-            </Avatar>
-          </ListItemAvatar>
-          <ListItemText
-            primaryTypographyProps={{
-              variant: 'h5',
-              color: `${theme.colors.alpha.black[100]}`
-            }}
-            primary="Writer’s Digest Daily"
-          />
-        </ListItem>
-        <Divider />
-        <ListItem button>
-          <ListItemAvatar>
-            <Avatar
-              sx={{ width: 38, height: 38 }}
-              src="/static/images/logo/google.svg"
-            />
-          </ListItemAvatar>
-          <ListItemText
-            primaryTypographyProps={{
-              variant: 'h5',
-              color: `${theme.colors.alpha.black[100]}`
-            }}
-            primary="Google Developers"
-          />
         </ListItem>
       </ListWrapper>
     </Card>

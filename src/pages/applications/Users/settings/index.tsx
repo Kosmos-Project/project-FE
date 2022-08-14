@@ -21,9 +21,9 @@ function ManagementUserSettings() {
   const [currentTab, setCurrentTab] = useState<string>('edit_profile');
 
   const tabs = [
-    { value: 'edit_profile', label: 'Edit Profile' },
-    { value: 'notifications', label: 'Notifications' },
-    { value: 'security', label: 'Passwords/Security' }
+    { value: 'edit_profile', label: '프로필 수정' },
+    { value: 'notifications', label: '알림 설정' },
+    { value: 'security', label: '계정 보안 설정' }
   ];
 
   const handleTabsChange = (event: ChangeEvent<{}>, value: string): void => {

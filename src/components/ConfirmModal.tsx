@@ -5,6 +5,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import TextField from '@mui/material/TextField';
 
 export default function ConfirmModal() {
   const [open, setOpen] = useState(false);
@@ -19,8 +20,8 @@ export default function ConfirmModal() {
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open alert dialog
+      <Button variant="outlined" size="large" onClick={handleClickOpen}>
+        비밀번호 변경
       </Button>
       <Dialog
         open={open}
@@ -30,13 +31,29 @@ export default function ConfirmModal() {
       >
         <DialogTitle id="alert-dialog-title">비밀번호 변경</DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending
-            anonymous location data to Google, even when no apps are running.
+          <DialogContentText>
+            <TextField
+              id="outlined-password-input"
+              label="현재 비밀번호"
+              type="password"
+              autoComplete="current-password"
+            />
           </DialogContentText>
-          <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending
-            anonymous location data to Google, even when no apps are running.
+          <DialogContentText>
+            <TextField
+              id="outlined-password-input"
+              label="비밀번호"
+              type="password"
+              autoComplete="current-password"
+            />
+          </DialogContentText>
+          <DialogContentText>
+            <TextField
+              id="outlined-password-input"
+              label="비밀번호 확인"
+              type="password"
+              autoComplete="current-password"
+            />
           </DialogContentText>
         </DialogContent>
         <DialogActions>

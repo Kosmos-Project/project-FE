@@ -42,12 +42,22 @@ function EditProfileTab() {
               <Grid container spacing={0}>
                 <Grid item xs={12} sm={4} md={3} textAlign={{ sm: 'right' }}>
                   <Box pr={3} pb={2}>
-                    Name:
+                    이름:
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={8} md={9}>
                   <Text color="black">
-                    <b>Craig Donin</b>
+                    <b>홍길동</b>
+                  </Text>
+                </Grid>
+                <Grid item xs={12} sm={4} md={3} textAlign={{ sm: 'right' }}>
+                  <Box pr={3} pb={2}>
+                    닉네임:
+                  </Box>
+                </Grid>
+                <Grid item xs={12} sm={8} md={9}>
+                  <Text color="black">
+                    <b>홍길동</b>
                   </Text>
                 </Grid>
                 <Grid item xs={12} sm={4} md={3} textAlign={{ sm: 'right' }}>
@@ -62,7 +72,7 @@ function EditProfileTab() {
                 </Grid>
                 <Grid item xs={12} sm={4} md={3} textAlign={{ sm: 'right' }}>
                   <Box pr={3} pb={2}>
-                    Address:
+                    주소:
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={8} md={9}>

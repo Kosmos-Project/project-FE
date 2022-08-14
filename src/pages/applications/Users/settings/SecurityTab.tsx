@@ -210,9 +210,6 @@ function SecurityTab() {
                 primary="Change Password"
                 secondary="You can change your password here"
               />
-              <Button size="large" variant="outlined">
-                Change password
-              </Button>
               <ConfirmModal />
             </ListItem>
           </List>

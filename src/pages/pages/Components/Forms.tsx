@@ -376,18 +376,6 @@ function Forms() {
           </Grid>
           <Grid item xs={12}>
             <Card>
-              <CardHeader title="Switches" />
-              <Divider />
-              <CardContent>
-                <Switch {...label} defaultChecked />
-                <Switch {...label} />
-                <Switch {...label} disabled defaultChecked />
-                <Switch {...label} disabled />
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12}>
-            <Card>
               <CardHeader title="Checkboxes &amp; Radios" />
               <Divider />
               <CardContent>
