@@ -9,7 +9,6 @@ import {
   lighten,
   Tooltip,
   IconButton,
-  Avatar,
   styled
 } from '@mui/material';
 import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone';
@@ -21,30 +20,6 @@ const CardLogo = styled('img')(
       padding: ${theme.spacing(1)};
       margin-right: ${theme.spacing(2)};
       background: ${theme.colors.alpha.white[100]};
-`
-);
-
-const CardAddAction = styled(Card)(
-  ({ theme }) => `
-        border: ${theme.colors.primary.main} dashed 1px;
-        height: 100%;
-        color: ${theme.colors.primary.main};
-        box-shadow: none;
-        
-        .MuiCardActionArea-root {
-          height: 100%;
-          justify-content: center;
-          align-items: center;
-          display: flex;
-        }
-        
-        .MuiTouchRipple-root {
-          opacity: .2;
-        }
-        
-        &:hover {
-          border-color: ${theme.colors.alpha.black[100]};
-        }
 `
 );
 

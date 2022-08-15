@@ -1,17 +1,12 @@
 import {
-  Typography,
   Card,
   CardHeader,
   Divider,
   List,
-  ListItem,
-  ListItemAvatar,
-  ListSubheader,
-  ListItemText,
-  Avatar,
   useTheme,
   styled
 } from '@mui/material';
+import PopularTagItem from './PopularTagItem';
 
 const ListWrapper = styled(List)(
   () => `
@@ -23,52 +18,19 @@ const ListWrapper = styled(List)(
 );
 
 function PopularTags() {
-  const theme = useTheme();
-
   return (
     <Card sx={{ height: '50%' }}>
       <CardHeader title="관심있는 검색어" />
       <Divider />
       <ListWrapper disablePadding>
-        <ListItem
-          sx={{
-            color: `${theme.colors.primary.main}`,
-            '&:hover': { color: `${theme.colors.primary.dark}` }
-          }}
-          button
-        >
-          <ListItemText primary="#HTML" />
-        </ListItem>
+        <PopularTagItem />
+        {/* 마지막인지 체크하고 Divider 유/무 결정 */}
         <Divider />
-        <ListItem
-          sx={{
-            color: `${theme.colors.primary.main}`,
-            '&:hover': { color: `${theme.colors.primary.dark}` }
-          }}
-          button
-        >
-          <ListItemText primary="#software_development" />
-        </ListItem>
+        <PopularTagItem />
         <Divider />
-        <ListItem
-          sx={{
-            color: `${theme.colors.primary.main}`,
-            '&:hover': { color: `${theme.colors.primary.dark}` }
-          }}
-          button
-        >
-          <ListItemText primary="#TrendingInfuencers" />
-        </ListItem>
+        <PopularTagItem />
         <Divider />
-        <ListItem
-          sx={{
-            color: `${theme.colors.primary.main}`,
-            '&:hover': { color: `${theme.colors.primary.dark}` }
-          }}
-          button
-        >
-          <ListItemText primary="#investorsWatch2022" />
-        </ListItem>
+        <PopularTagItem />
       </ListWrapper>
     </Card>
   );

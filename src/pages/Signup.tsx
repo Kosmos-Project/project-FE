@@ -29,8 +29,6 @@ const SignUp: React.FC = () => {
     });
   };
 
-  console.log('zoneCode, address', zoneCode, address);
-
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">

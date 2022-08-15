@@ -1,11 +1,9 @@
 import {
   Grid,
   Card,
-  lighten,
   CardActionArea,
   CardContent,
   Tooltip,
-  IconButton,
   Avatar,
   styled
 } from '@mui/material';

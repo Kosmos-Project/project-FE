@@ -40,9 +40,6 @@ const UserSettings = Loader(
   lazy(() => import('src/pages/applications/Users/settings'))
 );
 
-// Components
-const Forms = Loader(lazy(() => import('src/pages/pages/Components/Forms')));
-
 // 로그인, 회원가입도 추후에 lazy 사용하기
 // Status
 
@@ -185,10 +182,6 @@ const routes: RouteObject[] = [
       {
         path: '',
         element: <Navigate to="buttons" replace />
-      },
-      {
-        path: 'forms',
-        element: <Forms />
       }
     ]
   }

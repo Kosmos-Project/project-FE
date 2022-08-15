@@ -9,13 +9,11 @@ import {
   styled,
   Divider,
   useTheme,
-  Button,
   lighten,
-  darken,
-  Tooltip
+  darken
 } from '@mui/material';
 
-import SidebarMenu from '../../components/LNB';
+import LNB from '../../components/LNB';
 import Logo from 'src/components/LogoSign';
 
 const SidebarWrapper = styled(Box)(
@@ -72,7 +70,7 @@ function Sidebar() {
               background: theme.colors.alpha.trueWhite[10]
             }}
           />
-          <SidebarMenu />
+          <LNB />
         </Scrollbar>
         <Divider
           sx={{
@@ -116,7 +114,7 @@ function Sidebar() {
                 background: theme.colors.alpha.trueWhite[10]
               }}
             />
-            <SidebarMenu />
+            <LNB />
           </Scrollbar>
         </SidebarWrapper>
       </Drawer>

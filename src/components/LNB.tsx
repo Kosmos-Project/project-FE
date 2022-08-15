@@ -7,11 +7,6 @@ import BrightnessLowTwoToneIcon from '@mui/icons-material/BrightnessLowTwoTone';
 import MmsTwoToneIcon from '@mui/icons-material/MmsTwoTone';
 import TableChartTwoToneIcon from '@mui/icons-material/TableChartTwoTone';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
-import BeachAccessTwoToneIcon from '@mui/icons-material/BeachAccessTwoTone';
-import EmojiEventsTwoToneIcon from '@mui/icons-material/EmojiEventsTwoTone';
-import RedeemTwoToneIcon from '@mui/icons-material/RedeemTwoTone';
-import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
-import TrafficTwoToneIcon from '@mui/icons-material/TrafficTwoTone';
 import CheckBoxTwoToneIcon from '@mui/icons-material/CheckBoxTwoTone';
 import DisplaySettingsTwoToneIcon from '@mui/icons-material/DisplaySettingsTwoTone';
 import { MenuWrapper, SubMenuWrapper } from './LNBStyle';
@@ -122,30 +117,6 @@ function LNB() {
                   startIcon={<DisplaySettingsTwoToneIcon />}
                 >
                   계정 설정
-                </Button>
-              </ListItem>
-            </List>
-          </SubMenuWrapper>
-        </List>
-        <List
-          component="div"
-          subheader={
-            <ListSubheader component="div" disableSticky>
-              Components
-            </ListSubheader>
-          }
-        >
-          <SubMenuWrapper>
-            <List component="div">
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/components/forms"
-                  startIcon={<TrafficTwoToneIcon />}
-                >
-                  Forms
                 </Button>
               </ListItem>
             </List>
