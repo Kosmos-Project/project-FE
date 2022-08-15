@@ -8,20 +8,87 @@ import {
   Button
 } from '@mui/material';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
-import DoneTwoToneIcon from '@mui/icons-material/DoneTwoTone';
 import Text from 'src/components/Text';
 import Label from 'src/components/Label';
 import { useState } from 'react';
-import PersonalDetails from './PersonalDetails';
-import AccountSettings from './AccountSettings';
+import Avatar from '@mui/material/Avatar';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import ListItemText from '@mui/material/ListItemText';
+import PersonIcon from '@mui/icons-material/Person';
+import AddIcon from '@mui/icons-material/Add';
+import { blue } from '@mui/material/colors';
+
+const emails = ['username@gmail.com', 'user02@gmail.com'];
+
+export interface SimpleDialogProps {
+  open: boolean;
+  selectedValue: string;
+  onClose: (value: string) => void;
+}
+
+function SimpleDialog(props: SimpleDialogProps) {
+  const { onClose, selectedValue, open } = props;
+
+  const handleClose = () => {
+    onClose(selectedValue);
+  };
+
+  const handleListItemClick = (value: string) => {
+    onClose(value);
+  };
+
+  return (
+    <Dialog onClose={handleClose} open={open}>
+      <DialogTitle>Set backup account</DialogTitle>
+      <List sx={{ pt: 0 }}>
+        {emails.map((email) => (
+          <ListItem
+            button
+            onClick={() => handleListItemClick(email)}
+            key={email}
+          >
+            <ListItemAvatar>
+              <Avatar sx={{ bgcolor: blue[100], color: blue[600] }}>
+                <PersonIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary={email} />
+          </ListItem>
+        ))}
+        <ListItem
+          autoFocus
+          button
+          onClick={() => handleListItemClick('addAccount')}
+        >
+          <ListItemAvatar>
+            <Avatar>
+              <AddIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText primary="Add account" />
+        </ListItem>
+      </List>
+    </Dialog>
+  );
+}
 
 const EmailSettings = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedValue, setSelectedValue] = useState(emails[1]);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (value: string) => {
+    setOpen(false);
+    setSelectedValue(value);
+  };
   return (
     <Grid item xs={12}>
       <Card>
@@ -42,6 +109,11 @@ const EmailSettings = () => {
           <Button variant="text" startIcon={<EditTwoToneIcon />}>
             Edit
           </Button>
+          <SimpleDialog
+            selectedValue={selectedValue}
+            open={open}
+            onClose={handleClose}
+          />
         </Box>
         <Divider />
         <CardContent sx={{ p: 4 }}>
