@@ -41,10 +41,6 @@ const UserSettings = Loader(
 );
 
 // Components
-
-const Accordions = Loader(
-  lazy(() => import('src/pages/pages/Components/Accordions'))
-);
 const Forms = Loader(lazy(() => import('src/pages/pages/Components/Forms')));
 
 // 로그인, 회원가입도 추후에 lazy 사용하기
@@ -189,10 +185,6 @@ const routes: RouteObject[] = [
       {
         path: '',
         element: <Navigate to="buttons" replace />
-      },
-      {
-        path: 'accordions',
-        element: <Accordions />
       },
       {
         path: 'forms',

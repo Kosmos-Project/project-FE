@@ -142,17 +142,6 @@ function LNB() {
                   disableRipple
                   component={RouterLink}
                   onClick={closeSidebar}
-                  to="/components/accordions"
-                  startIcon={<EmojiEventsTwoToneIcon />}
-                >
-                  Accordions
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
                   to="/components/forms"
                   startIcon={<TrafficTwoToneIcon />}
                 >
