@@ -14,20 +14,24 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Postcode from 'src/utils/Postcode';
+import { useForm } from 'react-hook-form';
 
 const theme = createTheme();
 
 const SignUp: React.FC = () => {
+  const {
+    register,
+    watch,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
+
+  const onSubmit = (data) => console.log(data);
+
   const [zoneCode, setZoneCode] = useState();
   const [address, setAddress] = useState();
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password')
-    });
-  };
+
+  console.log(watch('example'));
 
   return (
     <ThemeProvider theme={theme}>
@@ -50,7 +54,7 @@ const SignUp: React.FC = () => {
           <Box
             component="form"
             noValidate
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit(onSubmit)}
             sx={{ mt: 3 }}
           >
             <Grid container spacing={2}>
@@ -60,41 +64,41 @@ const SignUp: React.FC = () => {
                   fullWidth
                   id="email"
                   label="이메일 주소"
-                  name="email"
                   autoComplete="email"
+                  {...register('email')}
                 />
               </Grid>
               <Grid item xs={12} sm={12}>
                 <TextField
                   autoComplete="given-name"
-                  name="name"
                   required
                   fullWidth
                   id="name"
                   label="이름"
                   autoFocus
+                  {...register('name')}
                 />
               </Grid>
               <Grid item xs={12} sm={12}>
                 <TextField
                   autoComplete="given-name"
-                  name="nickname"
                   required
                   fullWidth
                   id="nickname"
                   label="닉네임"
                   autoFocus
+                  {...register('nickname')}
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
-                  name="password"
                   label="비밀번호"
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  {...register('password')}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -106,16 +110,17 @@ const SignUp: React.FC = () => {
                   type="password"
                   id="password2"
                   autoComplete="new-password"
+                  {...register('password2')}
                 />
               </Grid>
               <Grid item xs={6}>
                 <TextField
                   required
                   fullWidth
-                  id="email"
+                  id="zoneCode"
                   placeholder="우편번호"
-                  name="email"
                   value={zoneCode}
+                  {...register('zoneCode')}
                 />
               </Grid>
               <Postcode setZoneCode={setZoneCode} setAddress={setAddress} />
@@ -123,19 +128,20 @@ const SignUp: React.FC = () => {
                 <TextField
                   required
                   fullWidth
-                  id="email"
+                  id="address"
                   placeholder="주소"
-                  name="email"
                   value={address}
+                  // TODO: 훅폼 작동 안함. 이 부분은 submit 시에 따로 넣어야 할 듯
+                  {...register('address')}
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
-                  id="email"
+                  id="detail_address"
                   label="상세 주소를 입력해 주세요"
-                  name="email"
+                  {...register('email')}
                 />
               </Grid>
               <Grid item xs={12}>

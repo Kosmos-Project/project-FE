@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,31 +12,21 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useForm } from 'react-hook-form';
 
 const theme = createTheme();
 
 const Login: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const {
+    register,
+    watch,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password')
-    });
-  };
+  const onSubmit = (data) => console.log(data);
 
-  const onEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const onPasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  console.log(email, password);
+  console.log(watch('example'));
 
   return (
     <ThemeProvider theme={theme}>
@@ -59,7 +48,7 @@ const Login: React.FC = () => {
           </Typography>
           <Box
             component="form"
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit(onSubmit)}
             noValidate
             sx={{ mt: 1 }}
           >
@@ -69,21 +58,19 @@ const Login: React.FC = () => {
               fullWidth
               id="email"
               label="이메일 주소"
-              name="email"
               autoComplete="email"
               autoFocus
-              onChange={onEmailChange}
+              {...register('email')}
             />
             <TextField
               margin="normal"
               required
               fullWidth
-              name="password"
               label="비밀번호"
               type="password"
               id="password"
               autoComplete="current-password"
-              onChange={onPasswordChange}
+              {...register('password')}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}

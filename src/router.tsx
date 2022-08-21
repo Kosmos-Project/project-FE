@@ -71,6 +71,14 @@ const routes: RouteObject[] = [
         element: <Overview />
       },
       {
+        path: 'login',
+        element: <Login />
+      },
+      {
+        path: 'signup',
+        element: <SignUp />
+      },
+      {
         path: 'status',
         children: [
           {
@@ -118,14 +126,6 @@ const routes: RouteObject[] = [
         element: <Messenger />
       }
     ]
-  },
-  {
-    path: 'login',
-    element: <Login />
-  },
-  {
-    path: 'signup',
-    element: <SignUp />
   },
   {
     path: 'dashboards',
@@ -197,16 +197,6 @@ const routes: RouteObject[] = [
             element: <UserSettings />
           }
         ]
-      }
-    ]
-  },
-  {
-    path: 'components',
-    element: <SidebarLayout />,
-    children: [
-      {
-        path: '',
-        element: <Navigate to="buttons" replace />
       }
     ]
   }
