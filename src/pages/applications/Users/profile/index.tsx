@@ -5,7 +5,6 @@ import { Grid, Container } from '@mui/material';
 
 import ProfileCover from './ProfileCover';
 import RecentActivity from './RecentActivity';
-import PopularTags from './PopularTags';
 import MyCards from './MyCards';
 import Addresses from './Addresses';
 
@@ -42,9 +41,6 @@ function ManagementUserProfile() {
           </Grid>
           <Grid item xs={12} md={6}>
             <RecentActivity />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <PopularTags />
           </Grid>
           <Grid item xs={12} md={6}>
             <MyCards />

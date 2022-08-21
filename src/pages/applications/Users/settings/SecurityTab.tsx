@@ -11,24 +11,12 @@ import {
   Button,
   ListItemAvatar,
   Avatar,
-  Switch,
-  CardHeader,
-  Tooltip,
-  IconButton,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TablePagination,
-  TableRow,
-  TableContainer,
   useTheme,
   styled
 } from '@mui/material';
 
 import ConfirmModal from 'src/components/ConfirmModal';
 import DoneTwoToneIcon from '@mui/icons-material/DoneTwoTone';
-import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone';
 import { format, subHours, subWeeks, subDays } from 'date-fns';
 
 const ButtonError = styled(Button)(
@@ -213,68 +201,6 @@ function SecurityTab() {
               <ConfirmModal />
             </ListItem>
           </List>
-        </Card>
-      </Grid>
-      <Grid item xs={12}>
-        <Card>
-          <CardHeader
-            subheaderTypographyProps={{}}
-            titleTypographyProps={{}}
-            title="Access Logs"
-            subheader="Recent sign in activity logs"
-          />
-          <Divider />
-          <TableContainer>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Browser</TableCell>
-                  <TableCell>IP Address</TableCell>
-                  <TableCell>Location</TableCell>
-                  <TableCell>Date/Time</TableCell>
-                  <TableCell align="right">Actions</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {logs.map((log) => (
-                  <TableRow key={log.id} hover>
-                    <TableCell>{log.browser}</TableCell>
-                    <TableCell>{log.ipaddress}</TableCell>
-                    <TableCell>{log.location}</TableCell>
-                    <TableCell>
-                      {format(log.date, 'dd MMMM, yyyy - h:mm:ss a')}
-                    </TableCell>
-                    <TableCell align="right">
-                      <Tooltip placement="top" title="Delete" arrow>
-                        <IconButton
-                          sx={{
-                            '&:hover': {
-                              background: theme.colors.error.lighter
-                            },
-                            color: theme.palette.error.main
-                          }}
-                          color="inherit"
-                          size="small"
-                        >
-                          <DeleteTwoToneIcon fontSize="small" />
-                        </IconButton>
-                      </Tooltip>
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <Box p={2}>
-            <TablePagination
-              component="div"
-              count={100}
-              page={page}
-              onPageChange={handleChangePage}
-              rowsPerPage={rowsPerPage}
-              onRowsPerPageChange={handleChangeRowsPerPage}
-            />
-          </Box>
         </Card>
       </Grid>
     </Grid>

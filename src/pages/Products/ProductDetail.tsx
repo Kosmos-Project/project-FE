@@ -79,16 +79,7 @@ function ProductDetail() {
                     image="/static/images/placeholders/covers/1.jpg"
                     title="Paella dish"
                   />
-                  <CardHeader
-                    avatar={
-                      <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        R
-                      </Avatar>
-                    }
-                    title="Shrimp and Chorizo Paella"
-                    subheader="September 14, 2016"
-                  />
-                </Card>{' '}
+                </Card>
                 <Card sx={{ maxWidth: 345, cursor: 'pointer' }}>
                   <CardHeader
                     avatar={

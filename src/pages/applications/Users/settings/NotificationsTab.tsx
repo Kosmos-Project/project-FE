@@ -55,24 +55,6 @@ function NotificationsTab() {
                 name="checkedA"
               />
             </ListItem>
-            <Divider component="li" />
-            <ListItem sx={{ p: 3 }}>
-              <ListItemText
-                primaryTypographyProps={{ variant: 'h5', gutterBottom: true }}
-                secondaryTypographyProps={{
-                  variant: 'subtitle2',
-                  lineHeight: 1
-                }}
-                primary="Weekly Report"
-                secondary="Receive account status weekly report in your inbox"
-              />
-              <Switch
-                color="primary"
-                checked={state.checkedB}
-                onChange={handleChange}
-                name="checkedB"
-              />
-            </ListItem>
           </List>
         </Card>
       </Grid>
