@@ -10,6 +10,10 @@ import Login from './pages/Login';
 import SignUp from './pages/Signup';
 import Products from './pages/Products/Products';
 import ProductDetail from './pages/Products/ProductDetail';
+import AddressForm from './pages/Products/AddressForm';
+import Checkout from './pages/Products/Checkout';
+import PaymentForm from './pages/Products/PaymentForm';
+import Review from './pages/Products/Review';
 
 const Loader = (Component) => (props) =>
   (
@@ -160,6 +164,22 @@ const routes: RouteObject[] = [
       {
         path: 'products/1',
         element: <ProductDetail />
+      },
+      {
+        path: 'address',
+        element: <AddressForm />
+      },
+      {
+        path: 'checkout',
+        element: <Checkout />
+      },
+      {
+        path: 'PaymentForm',
+        element: <PaymentForm />
+      },
+      {
+        path: 'review',
+        element: <Review />
       },
       {
         path: 'profile',
