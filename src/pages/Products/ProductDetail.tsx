@@ -27,6 +27,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Link } from 'react-router-dom';
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -102,6 +103,9 @@ function ProductDetail() {
                       frozen peas along with the mussels, if you like.
                     </Typography>
                   </CardContent>
+                  <Link to="/management/checkout">
+                    <Button variant="outlined">구매하기</Button>
+                  </Link>
                 </Card>
               </CardContent>
             </Card>

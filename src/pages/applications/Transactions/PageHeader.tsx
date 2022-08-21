@@ -1,6 +1,7 @@
 import { Typography, Button, Grid } from '@mui/material';
 
 import AddTwoToneIcon from '@mui/icons-material/AddTwoTone';
+import { Link } from 'react-router-dom';
 
 function PageHeader() {
   const user = {
@@ -18,13 +19,15 @@ function PageHeader() {
         </Typography>
       </Grid>
       <Grid item>
-        <Button
-          sx={{ mt: { xs: 2, md: 0 } }}
-          variant="contained"
-          startIcon={<AddTwoToneIcon fontSize="small" />}
-        >
-          Create transaction
-        </Button>
+        <Link to="/management/products">
+          <Button
+            sx={{ mt: { xs: 2, md: 0 } }}
+            variant="contained"
+            startIcon={<AddTwoToneIcon fontSize="small" />}
+          >
+            Create transaction
+          </Button>
+        </Link>
       </Grid>
     </Grid>
   );
