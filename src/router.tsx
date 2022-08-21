@@ -9,6 +9,7 @@ import SuspenseLoader from 'src/components/SuspenseLoader';
 import Login from './pages/Login';
 import SignUp from './pages/Signup';
 import Products from './pages/Products/Products';
+import ProductDetail from './pages/Products/ProductDetail';
 
 const Loader = (Component) => (props) =>
   (
@@ -155,6 +156,10 @@ const routes: RouteObject[] = [
       {
         path: 'products',
         element: <Products />
+      },
+      {
+        path: 'products/1',
+        element: <ProductDetail />
       },
       {
         path: 'profile',

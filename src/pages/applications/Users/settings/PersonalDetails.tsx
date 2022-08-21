@@ -80,7 +80,7 @@ const PersonalDetails = () => {
         <CardContent sx={{ p: 4 }}>
           <Typography variant="subtitle2">
             <Grid container spacing={0}>
-              <Grid item xs={12} sm={4} md={3} textAlign={{ sm: 'right' }}>
+              <Grid item xs={12} sm={4} md={3} textAlign={{ sm: 'left' }}>
                 <Box pr={3} pb={2}>
                   이름:
                 </Box>
@@ -90,7 +90,7 @@ const PersonalDetails = () => {
                   <b>홍길동</b>
                 </Text>
               </Grid>
-              <Grid item xs={12} sm={4} md={3} textAlign={{ sm: 'right' }}>
+              <Grid item xs={12} sm={4} md={3} textAlign={{ sm: 'left' }}>
                 <Box pr={3} pb={2}>
                   닉네임:
                 </Box>
@@ -100,7 +100,7 @@ const PersonalDetails = () => {
                   <b>홍길동</b>
                 </Text>
               </Grid>
-              <Grid item xs={12} sm={4} md={3} textAlign={{ sm: 'right' }}>
+              <Grid item xs={12} sm={4} md={3} textAlign={{ sm: 'left' }}>
                 <Box pr={3} pb={2}>
                   Date of birth:
                 </Box>
@@ -110,7 +110,7 @@ const PersonalDetails = () => {
                   <b>15 March 1977</b>
                 </Text>
               </Grid>
-              <Grid item xs={12} sm={4} md={3} textAlign={{ sm: 'right' }}>
+              <Grid item xs={12} sm={4} md={3} textAlign={{ sm: 'left' }}>
                 <Box pr={3} pb={2}>
                   주소:
                 </Box>
